@@ -1,12 +1,9 @@
-import {useEffect, useState} from 'react'
-import axios from 'axios'
-import './App.css'
-import CatList from "./components/CatList.jsx";
-
+import "bootstrap/dist/css/bootstrap.css"
+import Cats from './pages/Cats'
 function App() {
   return (
     <>
-        <CatList/>
+        <Cats/>
     </>
   )
 }
