@@ -9,7 +9,7 @@ const CatCard = ({cat}) => {
     }
 
     return (
-        <Col md={4} lg={3}>
+        <Col xs={6} md={4} lg={3} xl={3} xxl>
             <Card className="text-center" style={{marginBottom: 20}}>
                 <Card.Img
                     className={"text-center align-content-center"}
