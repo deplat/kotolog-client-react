@@ -13,7 +13,7 @@ const CatList = () => {
 
 return (
     <Container fluid={'xxl'}>
-        <Row xxl={5}>
+        <Row xxl={5} className="justify-content-center">
             {cats.map(cat => (
                 <CatCard key={cat.id} cat={cat} />
             ))}

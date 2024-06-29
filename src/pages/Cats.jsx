@@ -6,9 +6,9 @@ const Cats = () => {
         <Container fluid>
             <Row md={12} style={{padding:"1vh",marginBottom:"1vh",minHeight: "2vh"}}>
                 <Form className={"d-flex"}>
-                    <Col md={3} lg={2} justify={"center"} align={"center"} style={{
-                    }}>
-                        <Form.Range style={{width: "75%"}} value={0}/>
+                    <Col md={3} lg={2} className={"d-flex"} justify={"center"} align={"center"}>
+                        <Form.Label>Пол:</Form.Label>
+                        <Form.Range/>
                     </Col>
                     <Col md={9} lg={10} align={"center"}>
                         <p>ColorsBar</p>
