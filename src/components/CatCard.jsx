@@ -1,4 +1,4 @@
-import {Card, Col} from "react-bootstrap";
+import {Card} from "react-bootstrap";
 
 const avatarHost = import.meta.env.VITE_SERVER_HOST + '/avatar'
 
@@ -9,20 +9,21 @@ const CatCard = ({cat}) => {
     }
 
     return (
-        <Col xs={6} md={4} lg={3} xl={3} xxl>
-            <Card className="text-center bg-gradient  border-0 rounded-3" style={{marginBottom: 20}}>
+            <Card className={"text-center bg-transparent shadow m-0 p-0 border-0 rounded-3"}>
                 <Card.Img
                     className={"text-center align-content-center rounded-3"}
                     src={imgSrc(cat)}
                     alt={'Фото скоро появится'}
-                    style={{height: "25vh", minHeight:"300px", width: "100%", objectFit: "cover"}}
+                    style={{
+                        height: "30vh",
+                        minHeight:"300px",
+                        objectFit: "cover"}}
                 />
                 <Card.Body>
                     <Card.Title>{cat.name}</Card.Title>
                     <Card.Subtitle>{cat.age}</Card.Subtitle>
                 </Card.Body>
             </Card>
-        </Col>
     );
 };
 

@@ -3,8 +3,8 @@ import CatList from "../components/CatList.jsx";
 
 const Cats = () => {
     return (
-        <Container fluid>
-            <Row md={12} style={{padding:"1vh",marginBottom:"1vh",minHeight: "2vh"}}>
+        <Container fluid className={"mb-5"} >
+            <Row md={12} style={{padding: "1vh", marginBottom: "1vh", minHeight: "2vh"}}>
                 <Form className={"d-flex"}>
                     <Col md={3} lg={2} className={"d-flex"} justify={"center"} align={"center"}>
                         <Form.Label>Пол:</Form.Label>
@@ -15,11 +15,7 @@ const Cats = () => {
                     </Col>
                 </Form>
             </Row>
-            <Row md={12} className={"d-flex"}>
-                <Col lg={12}>
-                    <CatList/>
-                </Col>
-            </Row>
+            <CatList/>
         </Container>
     );
 };

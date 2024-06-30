@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
 import CatCard from "./CatCard.jsx";
-import {Container, Row} from "react-bootstrap";
+import {Col, Container, Row} from "react-bootstrap";
 
 const CatList = () => {
     const [cats, setCats] = useState([])
@@ -11,13 +11,16 @@ const CatList = () => {
             .catch(error => console.log(error))
     }, [])
 
-return (
-    <Container fluid={'xxl'}>
-        <Row xxl={5} className="justify-content-center">
-            {cats.map(cat => (
-                <CatCard key={cat.id} cat={cat} />
-            ))}
-        </Row>
-    </Container>
-)};
+    return (
+        <Container fluid >
+            <Row className={"justify-content-center"}>
+                {cats.map((cat) =>
+                    <Col key={cat.id} xs={6} md={4} xxl={4} className={"p-0"} style={{minWidth: "300px", maxWidth: "350px", margin: "1.2rem"}}>
+                        <CatCard cat={cat}/>
+                    </Col>
+                )}
+            </Row>
+        </Container>
+    )
+};
 export default CatList;
