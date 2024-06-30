@@ -12,10 +12,10 @@ const CatList = () => {
     }, [])
 
     return (
-        <Container fluid >
-            <Row className={"justify-content-center"}>
+        <Container fluid className={"m-0 p-0"}>
+            <Row className={"m-0 p-0 justify-content-center"}>
                 {cats.map((cat) =>
-                    <Col key={cat.id} xs={6} md={4} xxl={4} className={"p-0"} style={{minWidth: "300px", maxWidth: "350px", margin: "1.2rem"}}>
+                    <Col key={cat.id} xs={6} md={4} xxl={4} className={"p-0"} style={{minWidth: "280px", maxWidth: "350px", margin: "1.2rem"}}>
                         <CatCard cat={cat}/>
                     </Col>
                 )}
