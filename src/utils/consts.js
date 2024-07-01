@@ -1,0 +1,1 @@
+export const avatarHost = import.meta.env.VITE_SERVER_HOST + '/avatar'
